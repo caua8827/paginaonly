@@ -1,0 +1,377 @@
+/* Estilos gerais para o corpo da página */
+body {
+    display: grid; /* Define um grid para o layout da página */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    background-color: rgb(60, 61, 61); /* Define a cor de fundo */
+    border: 1px solid rgba(32, 32, 32, 0.253); /* Define uma borda ao redor do corpo */
+    font-family: "Lato", serif; /* Define o estilo de fonte dos textos */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimentos padrão */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos na largura total */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura */
+    background-color: #222121; /* Cor de fundo do cabeçalho */
+    padding: 10px; /* Adiciona espaçamento interno */
+    border: 2px solid rgb(58, 56, 56); /* Define uma borda ao redor do cabeçalho */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos na largura total */
+}
+
+/* Estilos para a barra de navegação */
+#navbar {
+    position: fixed; /* Fixa a barra de navegação no topo da página */
+    top: 0; /* Alinha a barra no topo */
+    left: 0; /* Garante que a barra começa na extrema esquerda */
+    width: 100%; /* Faz a barra ocupar toda a largura */
+    background-color: #222121; /* Cor de fundo da barra de navegação */
+    z-index: 99999999; /* Garante que a navbar fica acima do conteúdo */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos na largura total */
+}
+
+/* Estilos para a imagem do cabeçalho */
+#imagem {
+    height: 40px; /* Define a altura da imagem */
+}
+
+/* Estilos para o banner */
+#banner {
+    position: relative; /* Define o posicionamento relativo para que a sombra seja posicionada corretamente */
+    display: grid; /* Define um grid para o banner */
+    padding-top: 10px; /* Espaçamento superior */
+    padding-left: 20px; /* Espaçamento à esquerda */
+    justify-items: center; /* Centraliza os itens do grid horizontalmente */
+    width: 750px; /* Define a largura fixa do banner */
+    height: 300px; /* Define a altura fixa do banner */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos na largura total */
+    overflow: hidden; /* Garante que nada além das dimensões do banner seja exibido */
+}
+
+/* Adiciona a sombra gradiente ao banner */
+#banner::before {
+    content: ''; /* Insere um conteúdo vazio para a sombra */
+    position: absolute; /* Posicionamento absoluto para que a sombra fique sobre a imagem */
+    bottom: 0; /* Alinha a sombra na parte inferior */
+    left: 0; /* Garante que a sombra começa na esquerda */
+    width: 100%; /* Faz a sombra ocupar toda a largura do banner */
+    height: 100%; /* Faz a sombra ocupar toda a altura do banner */
+    background: linear-gradient(to top, black, transparent); /* Define o gradiente de preto para transparente */
+    pointer-events: none; /* Garante que a sombra não interfira nas interações com o banner */
+    z-index: 1; /* Garante que a sombra fica sobre a imagem do banner */
+    margin-left: 20px;
+}
+
+/* Estilos para a imagem do banner */
+#img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do banner */
+    height: 100%; /* Faz a imagem ocupar toda a altura do banner */
+    object-fit: cover; /* Mantém a proporção da imagem e preenche o contêiner */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos na largura total */
+}
+
+/* Estilos para o avatar */
+#avatar {
+    border-radius: 50%; /* Faz a imagem ser circular */
+    width: 150px; /* Define a largura da imagem */
+    position: relative; /* Posicionamento relativo */
+    margin-left: 40px; /* Margem à esquerda */
+    z-index: 1;
+    margin-top: -70px; /* Margem superior negativa para sobrepor elementos */
+}
+
+/* Estilos para o nome */
+#nome {
+    text-align: start; /* Alinha o texto à esquerda */
+    margin-left: 205px; /* Margem à esquerda */
+    margin-top: -80px; /* Margem superior negativa para sobrepor elementos */
+    color: white;
+}
+
+/* Estilos para o subnome */
+#subnome {
+    position: relative; /* Posicionamento relativo */
+    margin-left: 210px; /* Margem à esquerda */
+    margin-top: -30px; /* Margem superior negativa para sobrepor elementos */
+    color: white;
+}
+
+/* Estilos para a descrição */
+.descricao {
+    border: 1px solid rgba(0, 0, 0, 0); /* Define uma borda transparente */
+    margin-top: 20px; /* Margem superior */
+    margin-left: 70px; /* Margem à esquerda */
+    width: 600px; /* Define a largura da descrição */
+    color: white;
+}
+
+/* Estilos para a seção de assinatura */
+#assinar {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 20px; /* Margem superior */
+    margin-left: -400px; /* Margem à esquerda negativa para ajuste */
+    color: white;
+}
+
+/* Contêiner para os botões */
+.button-container {
+    display: flex; /* Define um flexbox */
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Espaçamento entre os itens */
+    max-width: 200px; /* Define a largura máxima */
+    margin: 0 auto; /* Centraliza o contêiner */
+    margin-top: -10px; /* Margem superior negativa para ajuste */
+}
+
+/* Estilos para os botões personalizados */
+.custom-button {
+    display: flex; /* Define um flexbox */
+    justify-content: space-between; /* Distribui os itens entre os extremos */
+    align-items: center; /* Centraliza os itens verticalmente */
+    background-color: #b43e08; /* Cor de fundo laranja escuro */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease; /* Transição suave para o hover */
+    width: 570px; /* Define a largura */
+    height: 10px; /* Define a altura */
+    margin-top: 3px; /* Margem superior */
+}
+
+/* Estilos para os elementos dentro do botão */
+.custom-button .left {
+    margin-right: auto; /* Margem automática à direita */
+}
+
+.custom-button .right {
+    margin-left: auto; /* Margem automática à esquerda */
+}
+
+/* Estilos para o hover dos botões */
+.custom-button:hover {
+    background-color: #ac1010; /* Cor de fundo mais escura ao passar o mouse */
+}
+
+/* Contêiner para os vídeos */
+.video-container {
+    display: flex; /* Define um flexbox */
+    flex-direction: column; /* Coloca os itens em coluna */
+    align-items: center; /* Central
+    iza os itens horizontalmente */
+    gap: 20px; /* Espaçamento entre os itens */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilos específicos para o primeiro vídeo */
+.video1 {
+    width: 70%; /* Define a largura total */
+    max-width: 600px; /* Define a largura máxima */
+    margin-top: 50px; /* Espaço para não sobrepor a navbar */
+    border-radius: 15px;
+    pointer-events: none; /* Desabilita a interação do usuário com o vídeo */
+}
+
+/* Estilos para os vídeos */
+.video {
+    width: 70%; /* Define a largura total */
+    max-width: 600px; /* Define a largura máxima */
+    filter: blur(5px); /* Aplica desfoque */
+    margin-top: 10px; /* Espaço para não sobrepor a navbar */
+    border-radius: 15px;
+    pointer-events: none; /* Desabilita a interação do usuário com o vídeo*/
+}
+.video-wrapper {
+    position: relative; /* Define o posicionamento relativo para que a marca d'água seja posicionada corretamente */
+    width: 100%;
+    max-width: 600px; /* Limite máximo de largura */
+}
+
+
+/* Ajuste para o conteúdo principal para considerar a altura da navbar fixa */
+.conteudo {
+    margin-top: 60px; /* Ajuste este valor conforme necessário */
+}
+
+#marcadagua1, #marcadagua2, #marcadagua3 {
+    width: 500px;
+    position: relative;
+    margin-top: -700px;
+    margin-block-end: 200px;
+    height: auto;
+    
+}
+
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    /* Ajustes para o banner */
+    #banner {
+        width: 100%; /* Ajusta a largura do banner para telas menores */
+        height: auto; /* Permite que a altura ajuste automaticamente */
+        padding-left: 0; /* Remove o espaçamento à esquerda */
+    }
+
+    #banner::before {
+        width: 100%; /* Ajusta a largura da sombra gradiente */
+        margin-left: 0; /* Remove a margem esquerda */
+    }
+
+    #img {
+        width: 100%; /* Ajusta a largura da imagem do banner */
+        height: auto; /* Permite que a altura ajuste automaticamente */
+    }
+
+    /* Ajustes para o perfil */
+    #perfil {
+        display: flex; /* Usa flexbox para alinhar o avatar, nome e subnome */
+        flex-direction: row; /* Alinha os itens na mesma linha */
+        align-items: center; /* Centraliza verticalmente */
+        margin-left: 0; /* Remove margem esquerda */
+        margin-top: 20px; /* Adiciona margem superior */
+        padding: 0 10px; /* Adiciona preenchimento lateral */
+    }
+
+    #avatar {
+        width: 100px; /* Reduz a largura do avatar */
+        margin-left: 0; /* Remove a margem à esquerda */
+        margin-top: 0; /* Remove a margem superior negativa */
+    }
+
+    #nome, #subnome {
+        margin-left: 10px; /* Ajusta a margem à esquerda */
+        margin-top: 0; /* Remove a margem superior negativa */
+        font-size: 16px; /* Reduz o tamanho da fonte */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    /* Ajustes para a descrição */
+    .descricao {
+        margin-left: 10px; /* Ajusta a margem à esquerda */
+        width: 90%; /* Ajusta a largura da descrição */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    /* Ajustes para a seção de assinatura */
+    #assinar {
+        margin-left: 0; /* Remove a margem à esquerda */
+        font-size: 16px; /* Reduz o tamanho da fonte */
+    }
+
+    /* Ajustes para o contêiner de botões */
+    .button-container {
+        max-width: 100%; /* Ajusta a largura máxima */
+        margin-top: 10px; /* Ajusta a margem superior */
+    }
+
+    /* Ajustes para os botões personalizados */
+    .custom-button {
+        width: 90%; /* Ajusta a largura dos botões */
+        height: auto; /* Ajusta a altura automaticamente */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    /* Ajustes para os vídeos */
+    .video1, .video {
+        width: 100%; /* Ajusta a largura dos vídeos */
+        max-width: 100%; /* Remove a largura máxima */
+        margin-top: 20px; /* Ajusta a margem superior */
+    }
+
+    /* Ajuste para o conteúdo principal */
+    .conteudo {
+        margin-top: 70px; /* Ajusta a margem superior */
+    }
+    #marcadagua1, #marcadagua2, #marcadagua3 {
+        width: 350px;
+        position: relative;
+        margin-top: -450px;
+        margin-block-end: 150px;
+        height: auto;
+        
+    }
+}
+
+/* Media Queries para telas muito pequenas */
+@media (max-width: 480px) {
+    /* Ajustes adicionais para o banner */
+    #banner {
+        height: auto; /* Permite que a altura ajuste automaticamente */
+        padding-left: 0; /* Remove o espaçamento à esquerda */
+    }
+
+    #img {
+        width: 100%; /* Ajusta a largura da imagem do banner */
+        height: auto; /* Permite que a altura ajuste automaticamente */
+    }
+
+    /* Ajustes adicionais para o perfil */
+    #perfil {
+        flex-direction: column; /* Coloca os itens em coluna */
+        align-items: center; /* Centraliza horizontalmente */
+        margin-top: 10px; /* Ajusta a margem superior */
+        padding: 0; /* Remove o preenchimento lateral */
+    }
+
+    #avatar {
+        width: 80px; /* Reduz ainda mais a largura do avatar */
+        margin-left: 0; /* Remove a margem à esquerda */
+        margin-top: 0; /* Remove a margem superior negativa */
+    }
+
+    #nome, #subnome {
+        margin-left: 0; /* Remove a margem à esquerda */
+        margin-top: 5px; /* Adiciona margem superior */
+        font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    /* Ajustes adicionais para a descrição */
+    .descricao {
+        margin-left: 70px; /* Ajusta a margem à esquerda */
+        width: 70%; /* Ajusta a largura da descrição */
+        font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    /* Ajustes adicionais para a seção de assinatura */
+    #assinar {
+        margin-left: 0; /* Remove a margem à esquerda */
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    /* Ajustes adicionais para o contêiner de botões */
+    .button-container {
+        max-width: 100%; /* Ajusta a largura máxima */
+        margin-top: 10px; /* Ajusta a margem superior */
+    }
+
+    /* Ajustes adicionais para os botões personalizados */
+    .custom-button {
+        width: 70%; /* Ajusta a largura dos botões */
+        height: auto; /* Ajusta a altura automaticamente */
+        font-size: 12px; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    /* Ajustes adicionais para os vídeos */
+    .video1, .video {
+        width: 80%; /* Ajusta a largura dos vídeos */
+        max-width: 100%; /* Remove a largura máxima */
+        margin-top: 10px; /* Ajusta a margem superior */
+    }
+
+    /* Ajuste adicional para o conteúdo principal */
+    .conteudo {
+        margin-top: 80px; /* Ajusta a margem superior */
+    }
+    #marcadagua1, #marcadagua2, #marcadagua3 {
+        width: 400px;
+        position: relative;
+        margin-top: -525px;
+        margin-block-end: 100px;
+        height: auto;
+        
+    }
+}
